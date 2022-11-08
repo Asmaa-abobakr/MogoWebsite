@@ -1,0 +1,403 @@
+@import './base/mixin/font';
+// GENERAL STYLE
+.title{
+    font-size: 1.5rem;
+    @include fontFamily(Kaushan-regular);
+}
+
+.sub-title{
+    font-size: 1.875rem;
+    @include fontFamily(Montserrat-bold);
+    position: relative;
+}
+.sub-title::after{
+    content: "";
+    position: absolute;
+    width: 8%;
+    height: .1875rem;
+    background-color: #f38181;
+    bottom: 0;
+    left: 46%;
+}
+
+.anme{
+    font-size: .875rem;
+    text-transform: uppercase;
+    @include fontFamily(Montserrat-regular);
+}
+.pos{
+    font-size: .9375rem;
+    color: #999999;
+    @include fontFamily(Roboto-italic);
+}
+
+.content{
+    font-size: .9375rem;
+    color: #999999;
+    @include fontFamily(Roboto);
+}
+
+.img-wrapper{
+    width: 80%;
+    background-color: #95e1d3;
+    img{
+        width: 100%;
+        transition: all 0.3s;
+    }
+    .overlay{
+        top:0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        transition: transform 0.3s;
+        visibility: hidden;
+        .social-icon-container{
+            background-color: #fce38a;
+            text-align: center;
+            .social-icon{
+                color: #f38181;
+                padding: .5rem .125rem;
+                font-size: 1.375rem;
+            }
+        }
+        .social-icon-container:hover{
+            background-color: #f38181;
+            .social-icon{
+                color: white;
+            }
+        }
+    }
+    &:hover .overlay{
+        visibility: visible;
+        background: linear-gradient(to bottom, rgba(243,129,129,0.9), rgba(252, 227, 138, 0.9));
+        transform: translate(-3% , -3%);
+    }
+    &:hover img{
+        transform: translate(-3% , -3%);
+    }
+}
+
+// ---------------------------------------//
+
+// START NAV 
+.nav-section{
+    background-color: rgba(243,129,129,0.9);
+}
+// END NAV
+
+// START HEADER
+.header{
+    width: 100%;
+    background-image: url(./../images/header/bg-header.jpg);
+    background-position: 0 30%;
+    height: 100vh;
+    .header-overlay{
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(to bottom, rgba(243,129,129,0.9), rgba(252, 227, 138, 0.9));
+        .title-cotainer{
+            width: 45%;
+            .header-subtitle{
+                font-size: 9.375rem;
+            }
+            .header-subtitle::after{
+                background-color: white;
+            }
+            button{
+                padding: 1% 2%;
+                background-color: transparent;
+            }
+        }
+    }
+}
+// END HEADER
+
+// START STORY
+.story{
+    .title-cotainer{
+        width: 50%;
+    }
+}
+// END STORY
+.review{
+    width: 100%;
+    background-color: #95e1d3;
+    .review-container{
+        width: 68%;
+        .text-container{
+            border-left: .0313rem solid white;
+            border-right: .0313rem solid white;
+        }
+        .num{
+            font-size: 4.5rem;
+            @include fontFamily(Montserrat-bold);
+        }
+        .text{
+            font-size: .875rem;
+            @include fontFamily(Montserrat-regular);
+        }
+    }
+
+}
+
+// START SERVICES
+.services{
+    .title-cotainer{
+        width: 45%;
+    }
+    .services-container{
+        width: 70%;
+        .service-name{
+            font-size: .875rem;
+            @include fontFamily(Montserrat-regular);
+        }
+        .text{
+            font-size: .9375rem;
+            color: #999999;
+            @include fontFamily(Roboto);
+        }
+        @media (max-width: 61.875rem) {
+            .b-col{
+                border-bottom: .0625rem solid #d1d0d0;
+            }
+        }
+    }
+}
+// END SERVICES
+
+// SART DESIGN
+.design{
+    width: 100%;
+    background-image: url(./../images/design/bg-unique-design.jpg);
+    .title-cotainer{
+        width: 45%;
+    }
+    .overlay-img{
+        top: 36%;
+        right: 30%;
+    }
+}
+// END DESIGN
+
+// START SERVICE
+.service{
+    .title-cotainer{
+        width: 45%;
+    }
+    .service-container {
+        width: 68%;
+        .drop-icon{
+            color: #95e1d3;
+            padding: 0 .1875rem;
+            font-size: 1.5rem;
+        }
+    }
+}
+// END SERVICE
+
+// START TESTIMONIAL
+.testimonial-1{
+    width: 100%;
+    background-color: #f8f8f8;
+    .testimonial{
+        width: 75%;
+        .slider-btn{
+            color: #999999;
+            font-size: 2.375rem;
+        }
+        .testimonial-content {
+            width: 75%;
+            margin-left: 8%;
+            display: flex;
+            align-items: center;
+            .test-img-wrapper{
+                width: 9.375rem;
+                height: 9.375rem;
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+}
+// END TESTIMONIAL
+
+// START TEAM
+.team{
+    .title-cotainer {
+        width: 65%;
+    }  
+}
+// END TEAM
+
+// START BRAND
+.brand{
+    width: 100%;
+    background-color: #f8f8f8;
+}
+// END BRAND
+
+// START WORK
+.work-container{
+    width: 99%;
+    .title-cotainer {
+        width: 45%;
+    }
+    img{
+        width: 100%;
+    }
+}
+// END WORK
+
+// START TESTIMONIAL
+.testimonial{
+    width: 75%;
+    // background-color: #999999;
+    .slider-btn{
+        color: #999999;
+        font-size: 2.375rem;
+    }
+    .testimonial-content {
+        width: 75%;
+        margin-left: 8%;
+        display: flex;
+        align-items: center;
+        .test-img-wrapper{
+            width: 12.5rem;
+            height: 12.5rem;
+            border-radius: 50%;
+            img{
+                width: 12.5rem;
+                height: 12.5rem;
+                border-radius: 50%;
+            }
+        }
+        .text, .name{
+            font-size: 1.5rem;
+            color: #999999;
+            @include fontFamily(Roboto-italic);
+        }
+        .name::before{
+            content: "";
+            width: 7%;
+            height: .1875rem;
+            background-color: #f38181;
+            position: absolute;
+            left: 0;
+            bottom: 33%;
+        }
+        .name{
+            padding-left: 10%;
+            @include fontFamily(Kaushan-regular);
+        }
+    }
+}
+// END TESTIMONIAL
+
+// START CLIENTS
+.clients{
+    width: 100%;
+    background-image: url(./../images/clients/bg-happy-client.jpg);
+    .title-cotainer {
+        width: 45%;
+    }
+    .clients-container{
+        width: 75%;
+        .client-img, img{
+            width: 6.25rem;
+            height: 6.25rem;
+            border-radius: 50%;
+        }
+        .pos::after{
+            content: "";
+            width: 10%;
+            height: .1875rem;
+            background-color: #f38181;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+        }
+        .text{
+            font-size: .9375rem;
+            color: #999999;
+            @include fontFamily(Roboto);
+        }
+    }
+}
+// END CLIENTS
+
+// START MAP
+.map-container{
+    width: 100%;
+    background-image: url(./../images/map/bg-map.jpg);
+    .title-cotainer{
+        width: 25%;
+        .title, .sub-title{
+            color: #f38181;;
+        }
+    }
+}
+// END MAP
+
+//START BLOG
+.blog{
+    .title-cotainer{
+        width: 45%;
+    }
+    .blog-container{
+        width: 75%;
+        .img-wrapper{
+            img{
+                width: 100%;
+            }
+            .overlay-date{
+                background-color: #95e1d3;
+                width: 15%;
+                text-align: center;
+                padding: 1%;
+                bottom: 5%;
+                left: -3%;
+                .day{
+                    font-size: 1.875rem;
+                    @include fontFamily(Montserrat-bold);
+                }
+                .month{
+                    font-size: .9375rem;
+                    @include fontFamily(Roboto-italic);
+                }
+            }
+        }
+        .img-title{
+            font-size: .875rem;
+            @include fontFamily(Montserrat-regular);
+        }
+        .img-text{
+            font-size: .9375rem;
+            color: #999999;
+            @include fontFamily(Roboto);
+            border-bottom: 1px solid #d1d0d0;
+        }
+        .reaction-container{
+            width: 45%;
+            .icon{
+                color: #95e1d3;
+            }
+        }
+    }
+}
+// END BLOG
+
+// START FOOTER
+.footer{
+    width: 100%;
+    .footer-container{
+        width: 75%;
+        .instagram-container img{
+            width: 100%;
+        }
+    }
+}
+// END FOOTER

@@ -1,0 +1,26 @@
+// font family 
+@font-face {
+	font-family: Kaushan-regular;
+    src: url(./../fonts/KaushanScript-Regular.ttf);
+}
+@font-face {
+	font-family: Montserrat-bold;
+	src: url(./../fonts/Montserrat-Bold.ttf);
+}
+@font-face {
+	font-family: Montserrat-regular;
+	src: url(./../fonts/Montserrat-Regular.ttf);
+}
+@font-face {
+    font-family: Roboto;
+    src: url(./../fonts/Roboto-Regular.ttf);
+}
+
+@font-face {
+    font-family: Roboto-italic;
+    src: url(./../fonts/Roboto-LightItalic.ttf);
+}
+
+@mixin fontFamily ($familyName) {
+    font-family: $familyName;
+}
